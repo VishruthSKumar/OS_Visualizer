@@ -1,2 +1,2 @@
-# CS257-OS-Lab-Project
-OS Lab course project implementing algorithms and an interface to showcase them.
+Our OS project has an interactive platform that teaches operating system algorithms through simulations and clear explanations.
+Link: https://github.com/HimaneeshYadala/OS-Lab-Project/
