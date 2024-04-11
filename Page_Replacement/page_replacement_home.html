@@ -31,13 +31,13 @@ clear: both;
 }
 
 .body_name{
-background-color: #0f0f0f;
+background-color: #6200ea;
 }
 
 
 
 .button {
-background-color: #FCBA28;
+background-color: #7e57e2;
 color: #0f0d0e;
 border: none;
 padding: 10px 20px;
@@ -54,11 +54,11 @@ font-weight: 550;
 background-color: #0f0d0e; 
 color: #FCBA28; 
 border-radius: 5px;
-border: 2px solid #FCBA28;
+border: 2px solid #7e57e2;
 }
 
 .button1:hover {
-background-color: #FCBA28;
+background-color: #7e57e2;
 color: #0f0d0e;
 }
 nav {
@@ -84,7 +84,7 @@ cursor: pointer;
 
 }
 .logo:hover {
-color: #FCBA28;
+color: #7e57e2;
 }
 
 ul {
@@ -140,7 +140,7 @@ font-size: small;
 }
 
 .dropdown-content a:hover {
-background-color:#FCBA28;
+background-color:#7e57e2;
 color: #0f0d0e;
 border-radius: 5px;
 }
@@ -166,15 +166,13 @@ display: block;
             <a href="../Deadlock/bankers.html">Deadlock - Banker's</a>
             <a href="../Fit/Fit.html">Fragment Fit</a>
             <a href="../Page_Replacement/page_replacement_home.html">Paging/Page Replacement</a>
-            <a href="../Disk_Scheduling/disk.html">Disk Scheduling</a>
+            <a href="../Disk/disk.html">Disk Scheduling</a>
             <a href="../File_Allocation/file.html">File Allocation</a>
             <a href="../Memory_Management/MVFT.html">Memory Management</a>
             <a href="../IPC/ipc.html">IPC</a>
-            <a href="../Hashing/security.html">Hashing</a>
+            <a href="../hashingAlgos/security.html">Hashing</a>
         </div>
     </li>
-      <li><button class="button button1">About</button></li>
-      <li><button class="button button1">References</button></li>
           </ul>
           
       
@@ -190,30 +188,30 @@ display: block;
 <br>
 <div class="container-fluid">
 <div class="row">
-      <div class="jumbotron" style="background-color:#0f0f0f">
-          <h1 style="color:#FCBA28" class="display-3" font="" color="black"><strong>PAGE REPLACEMENT ALGORITHMS</strong></h1>
-          <p style="color:#FCBA28" class="lead">A Page Replacement Algorithm is a technique employed by OS to manage memory by selecting which pages to replace in the main memory when it becomes full. 
+      <div class="jumbotron" style="background-color:#d1c4e9">
+          <h1 style="color:black" class="display-3" font="" color="black"><strong>PAGE REPLACEMENT ALGORITHMS</strong></h1>
+          <p style="color:black" class="lead">A Page Replacement Algorithm is a technique employed by OS to manage memory by selecting which pages to replace in the main memory when it becomes full. 
 The Primary goal is to Minimize page faults and optimize system performance. Various algorithms like FIFO, Optimal, LRU, MRU and Random are used, each with its own strategy for determining the page to evict. 
 The choice of algorithm depends on system requirements and workload characteristics.</p>
 </div>
-<div class="column1" style="background-color:#FCBA28">
+<div class="column1" style="background-color:#d1c4e9">
 <h2 style="color:black">FIFO</h2>
 <p style="color:black">The FIFO (First-In-First-Out) page replacement algorithm is a technique used in operating systems to manage memory by replacing the oldest page in the main memory when a page fault occurs. This algorithm operates on the principle of treating the pages in memory as a queue, where the page that entered first is the one to be replaced first.</p>
 </div>
-<div class="column1" style="background-color:#FCBA28">
+<div class="column1" style="background-color:#d1c4e9">
 <h2 style="color:black">OPTIMAL</h2>
 <p style="color:black">The Optimal algorithm works by replacing the page that will not be used for the longest period of time in the future. To determine which page to evict, it requires knowledge of the future memory access patterns, which is usually not available in practical systems. The algorithm looks ahead into the future and selects the page that will be accessed farthest in the future and replaces it.</p>
 </div>
-<div class="column1" style="background-color:#FCBA28">
+<div class="column1" style="background-color:#d1c4e9">
 <h2 style="color:black">LRU</h2>
 <p style="color:black">The LRU (Least Recently Used) page replacement algorithm is a technique used in operating systems to manage memory by replacing the page that has been least recently accessed. It assumes that pages that have not been accessed recently are less likely to be accessed in the near future.</p>
 </div>
-<div class="column1" style="background-color:#FCBA28">
+<div class="column1" style="background-color:#d1c4e9">
 <h2 style="color:black">MRU</h2>
 <p style="color: black">The MRU (Most Recently Used) page replacement algorithm is a technique used in operating systems to manage memory by replacing the page that has been most recently accessed. It assumes that recently used pages are more likely to be accessed again in the near future.
 </p>
 </div>
-<div class="column1" style="background-color:#FCBA28">
+<div class="column1" style="background-color:#d1c4e9">
 <h2 style="color:black">RANDOM</h2>
 <p style="color:black">The random page replacement algorithm is a simple technique, used in operating systems to manage Memory. It involves selecting a page for replacement randomly when a page fault occurs and the main memory is full.
 </p>

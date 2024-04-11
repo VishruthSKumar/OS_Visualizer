@@ -17,7 +17,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: white;
+      background-color: black;
     }
 
     .chartMenu {
@@ -46,7 +46,7 @@
       width: 400px;
       padding: 20px;
       border-radius: 20px;
-      border: solid 3px #6B5B95;
+      border: solid 3px #6200EA;
       background: rgb(0, 0, 0);
       color: rgb(255, 255, 255);
     }
@@ -64,11 +64,25 @@
     body {
     background-color: black;
     }
+    th{
+      color: white;
+    }
 
     @media only screen and (max-width:730px){
       .datavisulization{
           display: none;
       }
+  }
+  #outputTable thead tr th{
+    color: white;
+    font-weight: 500;
+  }
+  #outputTable thead tr td{
+    color: white;
+    font-weight: 500;
+  }
+  #outputTable{
+    color:white
   }
   </style>
 
@@ -94,7 +108,7 @@
 
   
 
-  <title style="color: #ffffff;">Process scheduling</title>
+  <title style="color: #ffffff">Process scheduling</title>
   <style>
 
 
@@ -119,13 +133,13 @@
     }
     
     .body_name{
-    background-color: #ffffff;
+    background-color: #0f0f0f;
     }
     
     
     
     .button {
-    background-color: #FCBA28;
+    background-color: #6200EA;
     color: #0f0d0e;
     border: none;
     padding: 10px 20px;
@@ -140,42 +154,44 @@
     }
     .button1 {
     background-color: #0f0d0e; 
-    color: #FCBA28; 
+    color: white; 
     border-radius: 5px;
-    border: 2px solid #FCBA28;
+    border: 2px solid #6200EA;
     }
     
     .button1:hover {
-    background-color: #FCBA28;
-    color: #0f0d0e;
+    background-color: #6200EA;
+    color: #ffffff;
     }
+    
     nav {
-    background-color: #0f0d0e;
-    height: 90px;
-    display:flex;
-    justify-content:space-between;
-    background: rgba(10, 4, 4, 0);
-    position:relative;
-    }
-    .logo {
-    border-radius: 12px;
-    margin: 15px;
-    margin-left: 4%;
-    padding: 18px 10px 2px 10px;
-    background: #231F20;
-    color: #f9f4da;
-    text-align: center;
-    font: 20px 'Outfit', sans-serif;
-    justify-content: center;
-    font-weight: bolder;
-    cursor: pointer;
-    padding-bottom: 20px;
-    
-    }
-    .logo:hover {
-    color: #FCBA28;
-    }
-    
+    background-color:#6200ea; /* Light purple */
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: #ffffff; /* White */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logo:hover {
+    background-color: #8502f7; /* Dark purple */
+  }
+  
     ul {
     list-style: none;
     margin-right: 4%;
@@ -192,7 +208,7 @@
     }
     
     a {
-    color: #FCBA28;
+    color: #6200EA;
     text-decoration: none;
     font-size: 20px;
     font-weight:bold;
@@ -215,7 +231,7 @@
     }
     
     .dropdown-content a {
-    color: #FCBA28;
+    color: green;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -229,7 +245,7 @@
     }
     
     .dropdown-content a:hover {
-    background-color:#FCBA28;
+    background-color:#6200EA;
     color: #0f0d0e;
     border-radius: 5px;
     }
@@ -238,6 +254,34 @@
     display: block;
     }
     
+    #inputTable tbody th:hover {
+  background-color: #6200EA;
+  color: white;
+}
+#inputTable tbody th {
+  color: black;
+}
+    
+#inputTable tbody td input:hover {
+  background-color: #6200EA;
+  color: white;
+}
+.logo {
+    font-size: 24px;
+    color: #ffffff; /* White */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logo:hover {
+    background-color: #6200EA; 
+    color:white/* Dark purple */
+  }
+  .container{
+    margin-top: 5%;
+  }
     </style>
 </head>
 
@@ -245,23 +289,25 @@
 <body>
 
   <nav>
-    <a class="logo" href="../index.html"> OS Project </a>
+    <a class="logo" href="index.html">OS VISUALIZER</a>
     <ul>
-        <li><button onclick="location.href = '../index.html';" class="button button1">Home</button></li>
-        <li class="dropdown"><button class="button button1 dropbtn">Algorithms</button>
-          <div class="dropdown-content">
-              <a href="../Process_Scheduling/process.html">Process Scheduling</a>
-              <a href="../Process_Synchronisation/sync.html">Process Synchronization</a>
-              <a href="../Deadlock/bankers.html">Deadlock - Banker's</a>
-              <a href="../Fit/Fit.html">Fragment Fit</a>
-              <a href="../Page_Replacement/page_replacement_home.html">Paging/Page Replacement</a>
-              <a href="../Disk_Scheduling/disk.html">Disk Scheduling</a>
-              <a href="../File_Allocation/file.html">File Allocation</a>
-              <a href="../Memory_Management/MVFT.html">Memory Management</a>
-              <a href="../IPC/ipc.html">IPC</a>
-              <a href="../Hashing/security.html">Hashing</a>
-          </div>       
-  </nav>
+      <li><button onclick="location.href = '../index.html';" class="button button1">Home</button></li>
+      <li class="dropdown"><button class="button button1 dropbtn">Algorithms</button>
+        <div class="dropdown-content">
+            <a href="../Process_Scheduling/process.html">Process Scheduling</a>
+            <a href="../Process_Synchronisation/sync.html">Process Synchronization</a>
+            <a href="../Deadlock/bankers.html">Deadlock - Banker's</a>
+            <a href="../Fit/Fit.html">Fragment Fit</a>
+            <a href="../Page_Replacement/page_replacement_home.html">Paging/Page Replacement</a>
+            <a href="../Disk/disk.html">Disk Scheduling</a>
+            <a href="../File_Allocation/file.html">File Allocation</a>
+            <a href="../Memory_Management/MVFT.html">Memory Management</a>
+            <a href="../IPC/ipc.html">IPC</a>
+            <a href="../hashingAlgos/security.html">Hashing</a>
+        </div>
+    </li>
+          </ul>
+</nav>
 
 
   <div class="container">
@@ -371,12 +417,12 @@
 
         <div class="col-md-4">
           <div style=" display:inline-block;">
-            <label style="color: #FCBA28;">Algorithm:</label>
+            <label style="color: #6200EA;">Algorithm:</label>
           </div>
 
 
-          <div class="btn-group algorithm_dropdown" style="margin-left:5px; color: #FCBA28;">
-            <button type="button" style="color: #000000;background-color: #FCBA28;" id="algorithm_button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+          <div class="btn-group algorithm_dropdown" style="margin-left:5px; color: #6200EA;">
+            <button type="button" style="color: #000000;background-color: #6200EA;" id="algorithm_button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"
               aria-expanded="false">
               FCFS <span class="caret"></span>
             </button>
@@ -388,23 +434,23 @@
             </ul>
           </div>
 
-          <p style="margin-top:15px; color: #FCBA28;" id="algorithm_explanation">
+          <p style="margin-top:15px; color: #6200EA;" id="algorithm_explanation">
           </p>
 
         </div><!-- /column -->
         <div class="col-md-4">
           <div>
-            <label style="color: #FCBA28;">Number of Processes:</label>
+            <label style="color: #6200EA;">Number of Processes:</label>
           </div>
           <div class="input-group">
             <span class="input-group-btn">
-              <button style="background-color: #FCBA28;color: #000000;" id='remove_row' type="button" class="btn btn-default btn-number minusbtn" data-type="minus">
+              <button style="background-color: #6200EA;color: #000000;" id='remove_row' type="button" class="btn btn-default btn-number minusbtn" data-type="minus">
                 <span class="glyphicon glyphicon-minus"></span>
               </button>
             </span>
             <input style="color: #ffffff;" id="proccess_num" disabled="disabled" class="form-control input-number" value="3">
             <span class="input-group-btn">
-              <button style="background-color: #FCBA28;color: #000000;" id='add_row' type="button" class="btn btn-default btn-number plusbtn" data-type="plus">
+              <button style="background-color: #6200EA;color: #000000;" id='add_row' type="button" class="btn btn-default btn-number plusbtn" data-type="plus">
                 <span class="glyphicon glyphicon-plus"></span>
               </button>
             </span>
@@ -412,7 +458,7 @@
 
 
           <div style="margin-top:20px; ">
-            <!-- <label style="color: #FCBA28;">Context Switch Time:</label> -->
+            <!-- <label style="color: #6200EA;">Context Switch Time:</label> -->
           </div>
           <div class="input-group">
             <span class="input-group-btn">
@@ -437,7 +483,7 @@
             </div>
             <div class="input-group">
               <span class="input-group-btn">
-                <button style="background-color: #FCBA28; color: #000000;" id="subtract_quantum" type="button" class="btn btn-default btn-number" data-type="minus"
+                <button style="background-color: #6200EA; color: #000000;" id="subtract_quantum" type="button" class="btn btn-default btn-number" data-type="minus"
                   data-field="quant[1]">
                   <span class="glyphicon glyphicon-minus"></span>
                 </button>
@@ -445,7 +491,7 @@
               <input style="color: #ffffff;background-color: #000000;" id="enter_quantum" type="text" name="quant[1]" class="form-control input-number" value="2"
                 style="background-color:rgb(0, 0, 0)">
               <span class="input-group-btn">
-                <button style="background-color: #FCBA28; color: #000000;" id="add_quantum" type="button" class="btn btn-default btn-number" data-type="plus"
+                <button style="background-color: #6200EA; color: #000000;" id="add_quantum" type="button" class="btn btn-default btn-number" data-type="plus"
                   data-field="quant[1]">
                   <span class="glyphicon glyphicon-plus"></span>
                 </button>
@@ -459,13 +505,13 @@
 
 
         <div style="display: block; text-align: center;">
-          <p style="color: #FCBA28;">Click on the run button to show the Output Table</p>
-          <button style="background-color: #FCBA28;color: #000000;" id="runBtn" class="runButton">Run</button>
+          <p style="color: #6200EA;">Click on the run button to show the Output Table</p>
+          <button style="background-color: #6200EA;color: #000000;" id="runBtn" class="runButton">Run</button>
         </div>
 
         <div style="display: block; text-align: center;">
-          <p style="color: #FCBA28;">Click on the Reset button to run another program</p>
-          <button style="background-color: #FCBA28; color: #000000;" onclick=(location.reload()) class="runButton">Reset</button>
+          <p style="color: #6200EA;">Click on the Reset button to run another program</p>
+          <button style="background-color: #6200EA; color: #000000;" onclick=(location.reload()) class="runButton">Reset</button>
         </div>
 
         <!-- <div class="col-md-4" style="margin-top:20px;">
@@ -551,13 +597,13 @@
   </div>
 
 
-    <span style="font-size: large; color: #FCBA28;">CPU Utilization:
+    <span style="font-size: large; color: #6200EA;">CPU Utilization:
       <div id="utilization" style="color:rgb(255, 255, 255);"></div>
     </span>
-    <span style="font-size: large; color: #FCBA28;">Average waiting time:
+    <span style="font-size: large; color: #6200EA;">Average waiting time:
       <div id="avgwt" style="color:rgb(255, 255, 255);"></div>
     </span>
-    <span style="font-size: large; color: #FCBA28">Average turn around time:
+    <span style="font-size: large; color: #6200EA">Average turn around time:
       <div id="avgtat" style="color:rgb(255, 255, 255);"></div>
     </span>
     <div  id="advdisfcfs" style="margin: 20px;border-radius: 20px; padding: 20px; background-color: whitesmoke;">
@@ -645,7 +691,7 @@
       </ul>
     </p>
   </div>
-    <!-- <button style="background-color: #FCBA28;color: #000000;" id="explanation">Show Explanation</button> -->
+    <!-- <button style="background-color: #6200EA;color: #000000;" id="explanation">Show Explanation</button> -->
   
 
       <!-- <div style="color: #000000;" class="explain container_docs" id="ex">

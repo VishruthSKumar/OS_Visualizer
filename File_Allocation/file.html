@@ -37,7 +37,7 @@ background-color: #0f0f0f;
 
 
 .button {
-background-color: #FCBA28;
+background-color: #6200ea;
 color: #0f0d0e;
 border: none;
 padding: 10px 20px;
@@ -52,13 +52,13 @@ font-weight: 550;
 }
 .button1 {
 background-color: #0f0d0e; 
-color: #FCBA28; 
+color: #ffffff; 
 border-radius: 5px;
-border: 2px solid #FCBA28;
+border: 2px solid #6200ea;
 }
 
 .button1:hover {
-background-color: #FCBA28;
+background-color: #6200ea;
 color: #0f0d0e;
 }
 nav {
@@ -84,7 +84,7 @@ cursor: pointer;
 
 }
 .logo:hover {
-color: #FCBA28;
+color: #6200ea;
 }
 
 ul {
@@ -103,7 +103,7 @@ margin: 0 20px;
 }
 
 a {
-color: #FCBA28;
+color: #ffffff;
 text-decoration: none;
 font-size: 20px;
 font-weight:bold;
@@ -126,7 +126,7 @@ backdrop-filter: blur(10.3px);
 }
 
 .dropdown-content a {
-color: #FCBA28;
+color: #6200ea;
 padding: 12px 16px;
 text-decoration: none;
 display: block;
@@ -140,7 +140,7 @@ font-size: small;
 }
 
 .dropdown-content a:hover {
-background-color:#FCBA28;
+background-color:#6200ea;
 color: #0f0d0e;
 border-radius: 5px;
 }
@@ -148,37 +148,64 @@ border-radius: 5px;
 .dropdown:hover .dropdown-content {
 display: block;
 }
-
+body{
+  color:white
+}
+ 
+nav {
+    background-color:#6200ea; /* Light purple */
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: #ffffff; /* White */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logo:hover {
+    background-color: #8502f7; /* Dark purple */
+    color:white
+  }
+ .container-fluid{
+  margin-top: 10%;
+ }
 </style></head>
 
 <body class="body_name">
       <!-- Navigation Bar --><nav>
-  <a class="logo" href="../index.html"> OS VISUALIZER </a>
-  <ul>
+    <a class="logo" href="index.html">OS VISUALIZER</a>
+    <ul>
       <li><button onclick="location.href = '../index.html';" class="button button1">Home</button></li>
       <li class="dropdown"><button class="button button1 dropbtn">Algorithms</button>
         <div class="dropdown-content">
-          <a href="../Process_Scheduling/process.html">Process Scheduling</a>
-          <a href="../Process_Synchronisation/sync.html">Process Synchronization</a>
-          <a href="../Deadlock/bankers.html">Deadlock - Banker's</a>
-          <a href="../Fit/Fit.html">Fragment Fit</a>
-          <a href="../Page_Replacement/page_replacement_home.html">Paging/Page Replacement</a>
-          <a href="../Disk_Scheduling/disk.html">Disk Scheduling</a>
-          <a href="../File_Allocation/file.html">File Allocation</a>
-          <a href="../Memory_Management/MVFT.html">Memory Management</a>
-          <a href="../IPC/ipc.html">IPC</a>
-          <a href="../Hashing/security.html">Hashing</a>
-      </div>
+            <a href="../Process_Scheduling/process.html">Process Scheduling</a>
+            <a href="../Process_Synchronisation/sync.html">Process Synchronization</a>
+            <a href="../Deadlock/bankers.html">Deadlock - Banker's</a>
+            <a href="../Fit/Fit.html">Fragment Fit</a>
+            <a href="../Page_Replacement/page_replacement_home.html">Paging/Page Replacement</a>
+            <a href="../Disk/disk.html">Disk Scheduling</a>
+            <a href="../File_Allocation/file.html">File Allocation</a>
+            <a href="../Memory_Management/MVFT.html">Memory Management</a>
+            <a href="../IPC/ipc.html">IPC</a>
+            <a href="../hashingAlgos/security.html">Hashing</a>
+        </div>
     </li>
-      <li><button class="button button1">About</button></li>
-      <li><button class="button button1">References</button></li>
           </ul>
-          
-      
-     
-      
 </nav>
-      
       <div class="container-fluid">
 
   
@@ -188,12 +215,12 @@ display: block;
 <div class="container-fluid">
 <div class="row">
       <div class="jumbotron" style="background-color:#0f0f0f">
-          <h1 style="color:#FCBA28" class="display-3" font="" color="black"><strong>File Allocation</strong></h1>
-          <p style="color:#FCBA28" class="lead">File allocation algorithms are used in operating systems to determine how files are stored on disk drives. These algorithms determine the most efficient way to allocate space for files, considering factors such as disk fragmentation, file size, and file access patterns.</p>
+          <h1 style="color:#ffffff" class="display-3" font="" color="black"><strong>File Allocation</strong></h1>
+          <p style="color:white" class="lead">File allocation algorithms are used in operating systems to determine how files are stored on disk drives. These algorithms determine the most efficient way to allocate space for files, considering factors such as disk fragmentation, file size, and file access patterns.</p>
 </div>
-<div class="column1" style="background-color:#FCBA28">
+<div class="column1" style="background-color:#6200ea">
 <h1 style="color:black">Contiguous Allocation</h1>
-<h5 style="color:black">In contiguous allocation, each file occupies a contiguous block of disk space.
+<h5 style="color:white">In contiguous allocation, each file occupies a contiguous block of disk space.
 It is simple to implement and allows for fast sequential access to files.
 However, it suffers from external fragmentation, where free space becomes scattered across the disk, leading to inefficient space utilization.</h5>
 <h5> 
@@ -212,9 +239,9 @@ External Fragmentation: One of the major drawbacks of contiguous allocation is e
 File Growth and Compaction: Contiguous allocation poses challenges when files need to grow in size. If there is no contiguous space available immediately after the existing blocks, the file must be moved to a new location with enough contiguous space. This process, known as compaction, can be time-consuming and requires a significant number of disk I/O operations.
 </h5>
 </div>
-<div class="column1" style="background-color:#FCBA28">
+<div class="column1" style="background-color:#6200ea">
 <h1 style="color:black">Linked Allocation</h1>
-<h5 style="color:black">In linked allocation, each file is represented as a linked list of blocks, where each block contains a pointer to the next block in the file.
+<h5 style="color:white">In linked allocation, each file is represented as a linked list of blocks, where each block contains a pointer to the next block in the file.
 It eliminates external fragmentation because files can be stored in non-contiguous blocks.
 However, random access to a file becomes slower since the entire linked list needs to be traversed.</h5><br>
 <h5>
@@ -233,9 +260,9 @@ Slower Random Access: Random access to files stored using linked allocation can 
 </h5>
 </div>
 
-<div class="column1" style="background-color:#FCBA28">
+<div class="column1" style="background-color:#6200ea">
   <h1 style="color:black">Indexed Allocation</h1>
-  <h5 style="color:black">a special block known as the Index block contains the pointers to all the blocks occupied by a file. Each file has its own index block. The ith entry in the index block contains the disk address of the ith file block. The directory entry contains the address of the index block </h5>
+  <h5 style="color:white">a special block known as the Index block contains the pointers to all the blocks occupied by a file. Each file has its own index block. The ith entry in the index block contains the disk address of the ith file block. The directory entry contains the address of the index block </h5>
   <h5> 
     Advantages of Indexed File Allocation:<br><br>
   

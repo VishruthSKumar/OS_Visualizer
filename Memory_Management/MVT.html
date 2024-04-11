@@ -5,33 +5,18 @@
 </head>
 <body>
 
-<nav>
-        <a class="logo" href="../index.html"> OS VISUALIZER </a>
-        <ul>
-            <li><button onclick="location.href = '../index.html';" class="button button1">Home</button></li>
-            <li class="dropdown"><button class="button button1 dropbtn">Algorithms</button>
-              <div class="dropdown-content">
-                <a href="../Process_Scheduling/process.html">Process Scheduling</a>
-                <a href="../Process_Synchronisation/sync.html">Process Synchronization</a>
-                <a href="../Deadlock/bankers.html">Deadlock - Banker's</a>
-                <a href="../Fit/Fit.html">Fragment Fit</a>
-                <a href="../Page_Replacement/page_replacement_home.html">Paging/Page Replacement</a>
-                <a href="../Disk_Scheduling/disk.html">Disk Scheduling</a>
-                <a href="../File_Allocation/file.html">File Allocation</a>
-                <a href="../Memory_Management/MVFT.html">Memory Management</a>
-                <a href="../IPC/ipc.html">IPC</a>
-                <a href="../Hashing/hashing.html">Hashing</a>
-              </div>
-            </li>
-            <li><button class="button button1">About</button></li>
-            <li><button class="button button1">References</button></li>
-        </ul>   
-    </nav>
+  <nav>
+    <a class="logo" href="index.html">OS VISUALIZER</a>
+    <ul>
+        <li><a class="button button1" href="#">Home</a></li>
+        <li><a class="button button1" href="about.html">About</a></li>
+        <li><a class="button button1" href="#">References</a></li>
+    </ul>
+</nav>
 	
-	<nav class="logo">
+	<div class="container">
 	<h1>Memory Management - MVT (Multiple Variable-size Tasks)</h1>
-	</nav>
-	</nav>
+	</div>
 	
   
 
@@ -41,7 +26,7 @@
 
   <div id="block-container"></div>
 
-  <p style="color: #FCBA28;">Process Allocation:</p>
+  <p style="color: #6200ea;">Process Allocation:</p>
   
   <label for="process-size">Enter the size of the process:</label>
   <input type="number" id="process-size">

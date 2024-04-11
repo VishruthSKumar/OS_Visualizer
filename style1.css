@@ -3,10 +3,10 @@
   }
   
   body {
-    background-color: #000000; /* Black */
+    background-color: #6200ea; /* Black */
     font-family: 'Outfit', sans-serif;
     font-size: 16px;
-    color: #7e57e2; /* White */
+    color: black; /* White */
     margin: 0;
     padding: 0;
   }
