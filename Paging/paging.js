@@ -40,20 +40,47 @@ function calculatePhysicalAddress() {
   const pageNo = parseInt(document.getElementById('pageNumber').value);
   const offset = parseInt(document.getElementById('offset').value);
 
-  const processPagesInput = document.getElementById(`process${processNo}Pages`);
+  const processPagesInput = document.getElementById(process${processNo}Pages);
   const processPages = processPagesInput.value.split(' ').map(Number);
 
-  if (pageNo >= processPages.length) {
+  // Check if the page number is greater than the maximum page number in the process
+  if (pageNo > Math.max(...processPages)) {
     alert('Invalid page number!');
     return false;
   }
 
+  // Check for common elements in page arrays of different processes
+  const numProcesses = parseInt(document.getElementById('numProcesses').value);
+  for (let i = 1; i <= numProcesses; i++) {
+    if (i !== processNo) {
+      const otherProcessPagesInput = document.getElementById(process${i}Pages);
+      const otherProcessPages = otherProcessPagesInput.value.split(' ').map(Number);
+      const commonPages = processPages.filter(page => otherProcessPages.includes(page));
+      if (commonPages.length > 0) {
+        alert('Invalid page numbers! One page cannot be allocated to multiple processes.');
+        return false;
+      }
+    }
+  }
+
   const pageSize = parseInt(document.getElementById('pageSize').value);
-  const page = processPages[pageNo];
+  
+  // Find the index of the page number in the processPages array
+  const pageIndex = processPages.indexOf(pageNo);
+  
+  // Check if the page number exists in the array
+  if (pageIndex === -1) {
+    alert('Page number not found!');
+    return false;
+  }
+  
+  // Retrieve the page number using the index
+  const page = processPages[pageIndex];
+  
   const physicalAddress = (page * pageSize) + offset;
 
   const result = document.getElementById('result');
-  result.innerHTML = `The physical address is: ${physicalAddress}`;
+  result.innerHTML = The physical address is: ${physicalAddress};
   result.style.display = 'block';
 
   // Prevent default form submission
