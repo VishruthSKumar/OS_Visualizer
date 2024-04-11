@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
@@ -210,9 +209,9 @@ body{
   }
   </style>
 </head>
-<body class="body_name">
-    <!-- Navigation Bar -->
-    <nav>
+<body>
+
+	<nav>
         <a class="logo" href="../index.html">OS VISUALIZER</a>
     <ul>
       <li><a href="../index.html">Home</a></li>
@@ -232,43 +231,41 @@ body{
       </li>
   </ul>
 </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="jumbotron fun" style="background-color:#0f0f0f" >
-                <div class="xyheader">
-                <h1>Memory Fit</h1></div>
-                <p style="color:#d1c4e9" class="lead">
-                    Memory management algorithms in operating systems determine how memory is allocated and deallocated. First Fit searches memory sequentially and allocates the first block that fits the process. Best Fit selects the smallest available block that can accommodate the process, minimizing wastage. Other algorithms like Worst Fit, Next Fit, Quick Fit, and Buddy System offer variations in efficiency and fragmentation handling</p>
-                </p>
-            </div>
-            <div class="column1" style="background-color:#d1c4e9">
-                <h2 style="color:#8502f7">First Fit</h2>
-                <p style="color:black">First Fit allocates the first available memory block that is large enough to accommodate the process. It starts searching from the beginning of the memory and assigns the process to the first block that meets the size requirement. This technique is simple and efficient but can lead to significant fragmentation.</p>
-                
-                <a href="First_Fit.html">Simulate First Fit</a>
-                
-            </div>
-            <div class="column1" style="background-color:#d1c4e9">
-                <h2 style="color:#8502f7">Best Fit</h2>
-                <p style="color:black">Best Fit allocates the smallest available memory block that is just large enough to hold the process. It searches through the entire memory and selects the block that results in the smallest amount of wasted space. This technique reduces fragmentation, but it requires more time for searching the entire memory.</p>
-                
-                <a href="Best_Fit.html">Simulate Best Fit</a>
-                
-            </div>
-            <div class="column1" style="background-color:#d1c4e9">
-                <h2 style="color:#8502f7">Worst Fit</h2>
-                <p style="color:black">Worst Fit allocates the largest available memory block to the process. It searches through the entire memory and assigns the process to the largest block, leaving behind a larger amount of wasted space. This technique increases fragmentation but can be useful when large processes need to be allocated.</p>
-                
-                <a href="Worst_Fit.html">Simulate Worst Fit</a>
-                
-            </div>
-            <div class="column1" style="background-color:#d1c4e9">
-                <h2 style="color : #8502f7">Next Fit</h2>
-                <p style="color: black">Next Fit is an extension of the First Fit technique that starts searching for the next available block from the location where the previous allocation took place. It reduces the search time compared to First Fit as it continues the search from the last allocated position. However, it may still result in fragmentation similar to First Fit.
-                </p>
-                
-                <a href="Next_Fit.html">Simulate Next Fit</a>
-                
-            </div>
-        </div>
-    </div>
+	<div class="container">
+	<div>
+	<h1>Memory Management</h1>
+	</div>
+	
+	<h3 class="heading">MFT(Multiprogramming with Fixed number of Tasks)</h3>
+	In MFT, the main memory is divided into fixed-sized partitions or fixed task 
+	areas, with each partition reserved for a specific task or program. 
+	These partitions are assigned to programs before execution and do not change 
+	during runtime. Each task or program is allocated a fixed partition regardless
+	of its size. MFT provides better protection between programs as they are 
+	isolated within their respective partitions.
+	It also avoids external fragmentation since partitions do not change size.
+	<p>
+	<br>
+	<button class="button1">
+	 <a href="MFT.html">Simulate MFT</a></button>
+	 </p>
+	 <br>
+	 <p>
+	<h3 class="heading">MVT(Multiprogramming with Variable number of Tasks)</h3>
+	In MVT, the main memory is divided into variable-sized partitions to accommodate 
+	different programs or tasks. Each program is allocated memory based on its requirements. When a new program arrives, the operating system searches for a large enough partition to accommodate it. If a suitable partition is found, the program is loaded into that partition. MVT allows efficient memory utilization as partitions can be 
+	adjusted dynamically based on the requirements of incoming programs.
+	However, it can lead to external fragmentation since free memory blocks 
+	may be scattered throughout the memory.
+	</p>
+	<br>
+	<p>
+	<button class="button1">
+	 <a href="MVT.html">Simulate MvT</a>
+	 </button>
+	</p>
+</div>
+</body>
+</html>
+	
+	

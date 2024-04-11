@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+
+</head>
+
 <style>
 .column {
     padding: 15px;
@@ -161,46 +164,7 @@
   .jumbotron fun{
   
   }
-  .dropdown-content {
-display: none;
-position: absolute;
-min-width: 135px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-background: rgba(2, 2, 0, 0.45);
-border-radius: 5px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10.3px);
--webkit-backdrop-filter: blur(10.3px);
-
-}
-
-.dropdown-content a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-border: none;
-cursor: pointer;
-transition-duration: 0.25s;
-font-family: 'Outfit', sans-serif;
-font-weight: 550;
-font-size: small;
-
-}
-
-.dropdown-content a:hover {
-background-color:#6200ea;
-color: #0f0d0e;
-border-radius: 5px;
-}
-
-.dropdown:hover .dropdown-content {
-display: block;
-}
-body{
-  color:white
-}
+  
   .xyheader{
     padding-top: 1%;
     margin-top: 5%;
@@ -209,29 +173,32 @@ body{
   
   }
   </style>
-</head>
+
 <body class="body_name">
     <!-- Navigation Bar -->
     <nav>
-        <a class="logo" href="../index.html">OS VISUALIZER</a>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">Algorithms <i class="fa fa-caret-down"></i></a>
+        <a class="logo" href="index.html">OS VISUALIZER</a>
+        <ul>
+            <li><a class="a" href="#">Home</a></li>
+            <li><a class="a" ><button class="a" class="dropdown">Algorithms</button></a></li>
+        </ul>
+    </nav>
+    <li>
         <div class="dropdown-content">
-          <a href="../process_scheduling/process.html">Process Scheduling</a>
-          <a href="../hashingAlgos/security.html">Security Algorithms</a>
-          <a href="../Bankers/bankers.html">Bankers Algorithm</a>
-          <a href="../mft_mvt/Fit.html">Fit Algorithms</a>
-          <a href="../Page_Replacement_Algo/page_replacement_home.html">Page Replacement Algorithm</a>
-          <a href="../Disk/disk.html">Disk Scheduling</a>
-          <a href="../file_allocation/file.html">File Allocation</a>
-          <a href="../mft_mvt/MVFT.html">MFT and MVT</a>
-          <a href="../Paging/paging.html">Paging Simulator</a>
+            <a href="../Process_Scheduling/process.html">Process Scheduling</a>
+            <a href="../Process_Synchronisation/sync.html">Process Synchronization</a>
+            <a href="../Deadlock/bankers.html">Deadlock - Banker's</a>
+            <a href="../Fit/Fit.html">Fragment Fit</a>
+            <a href="../Page_Replacement/page_replacement_home.html">Paging/Page Replacement</a>
+            <a href="../Disk/disk.html">Disk Scheduling</a>
+            <a href="../File_Allocation/file.html">File Allocation</a>
+            <a href="../Memory_Management/MVFT.html">Memory Management</a>
+            <a href="../IPC/ipc.html">IPC</a>
+            <a href="../hashingAlgos/security.html">Hashing</a>
         </div>
-      </li>
-  </ul>
-</nav>
+    </li>
+
+
     <div class="container-fluid">
         <div class="row">
             <div class="jumbotron fun" style="background-color:#0f0f0f" >
